@@ -63,6 +63,14 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
   data.toggle()
 })
 
+function insecurePassword() {
+  // BAD: the random suffix is not cryptographically secure
+  var suffix = Math.random();
+  var password = "myPassword" + suffix;
+  return password;
+}
+
+
 /**
  * jQuery
  */
